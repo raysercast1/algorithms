@@ -1,1 +1,117 @@
-<mxfile host="app.diagrams.net" modified="2020-10-13T16:48:43.682Z" agent="5.0 (X11)" version="13.7.9" etag="wo5bgs4UmXSHw2868eYf" type="github"><diagram id="5Wj10sws5b69bl1W-5qt">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2020-10-13T17:04:50.808Z" agent="5.0 (X11)" etag="Z0T0lOnvphHKIZKhmgnN" version="13.7.9" type="github">
+  <diagram id="5Wj10sws5b69bl1W-5qt" name="Page-1">
+    <mxGraphModel dx="1038" dy="512" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="MZBl_Tk176kQ21L1o13z-3" value="ENDPOINT" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="535" y="80" width="110" height="177.5" as="geometry" />
+        </mxCell>
+        <mxCell id="MZBl_Tk176kQ21L1o13z-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="110" y="100" as="targetPoint" />
+            <mxPoint x="110" y="80" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MZBl_Tk176kQ21L1o13z-6" value="" style="endArrow=classic;html=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="220" y="120" as="sourcePoint" />
+            <mxPoint x="470" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MZBl_Tk176kQ21L1o13z-10" value="Solicitar url" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="MZBl_Tk176kQ21L1o13z-6">
+          <mxGeometry x="-0.168" y="3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MZBl_Tk176kQ21L1o13z-30" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="MZBl_Tk176kQ21L1o13z-6">
+          <mxGeometry x="0.872" y="-4" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MZBl_Tk176kQ21L1o13z-8" value="" style="endArrow=classic;html=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="480" y="160" as="sourcePoint" />
+            <mxPoint x="220" y="160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MZBl_Tk176kQ21L1o13z-9" value="Devuelve url" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="MZBl_Tk176kQ21L1o13z-8">
+          <mxGeometry x="-0.1" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MZBl_Tk176kQ21L1o13z-31" value="2" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="MZBl_Tk176kQ21L1o13z-8">
+          <mxGeometry x="0.8538" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MZBl_Tk176kQ21L1o13z-12" value="KEYBE" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="80" width="110" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="MZBl_Tk176kQ21L1o13z-13" value="AS" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="115" y="510" width="370" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="MZBl_Tk176kQ21L1o13z-14" value="" style="endArrow=classic;html=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="110" y="340" as="sourcePoint" />
+            <mxPoint x="130" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MZBl_Tk176kQ21L1o13z-15" value="Redirect para pedir code" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="MZBl_Tk176kQ21L1o13z-14">
+          <mxGeometry x="-0.1819" y="-1" relative="1" as="geometry">
+            <mxPoint x="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MZBl_Tk176kQ21L1o13z-32" value="3" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="MZBl_Tk176kQ21L1o13z-14">
+          <mxGeometry x="0.716" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MZBl_Tk176kQ21L1o13z-16" value="" style="endArrow=classic;html=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="330" y="445" as="sourcePoint" />
+            <mxPoint x="490" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MZBl_Tk176kQ21L1o13z-17" value="Devuelve el ?code=xxx" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="MZBl_Tk176kQ21L1o13z-16">
+          <mxGeometry x="0.1374" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MZBl_Tk176kQ21L1o13z-33" value="4" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="MZBl_Tk176kQ21L1o13z-16">
+          <mxGeometry x="0.7973" y="-3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MZBl_Tk176kQ21L1o13z-19" value="Procesa el code, companyId y appId. Hace la solicitud del token, guardan en BD y hace redirect al front." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="690" y="130" width="80" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="MZBl_Tk176kQ21L1o13z-20" value="" style="endArrow=classic;html=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="510" y="220" as="sourcePoint" />
+            <mxPoint x="220" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MZBl_Tk176kQ21L1o13z-21" value="al hacer redirect con autorizacion OK" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="MZBl_Tk176kQ21L1o13z-20">
+          <mxGeometry x="0.1448" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MZBl_Tk176kQ21L1o13z-35" value="5" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="MZBl_Tk176kQ21L1o13z-20">
+          <mxGeometry x="0.8966" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MZBl_Tk176kQ21L1o13z-23" value="La url callback debe redireccionar al ENDPOINT con los parametros CompanyId y AppID" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="110" y="630" width="380" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="MZBl_Tk176kQ21L1o13z-25" value="Agregar con State el companyId y el AppId antes de redireccionar" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="50" y="260" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="MZBl_Tk176kQ21L1o13z-34" value="Junto a companyId y AppId al ENDPOINT esperado" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="415" y="380" width="120" height="20" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
