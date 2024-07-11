@@ -1,0 +1,45 @@
+public class BinaryTree {
+    static public void main(String[] args) {
+        System.out.println("Result is: ");
+        Node one = new Node(1);
+        Node two = new Node(2);
+        Node three = new Node(3);
+        Node four = new Node(4);
+        Node five = new Node(5);
+        Node six = new Node(6);
+        Node seven = new Node(7);
+        Node eight = new Node(8);
+
+        one.left = two;
+        two.left = three;
+        three.left = four;
+        four.right = five;
+        five.left = six;
+        six.right = seven;
+        seven.right = eight;
+
+        dfs(one); 
+                
+    }
+    
+    public static class Node {
+        int val;
+        Node left;
+        Node right;
+        Node(int val) {
+            this.val = val;
+        }
+    }    
+    
+    static private void dfs(Node node) {
+        if (node == null) {
+            return;
+        }
+        
+        System.out.println("I am TreeNode #: ");
+        System.out.println(node.val);
+        dfs(node.left);
+        dfs(node.right);
+        return;
+    }
+}
