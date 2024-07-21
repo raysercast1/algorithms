@@ -49,7 +49,7 @@
         System.out.println("Root value is:");
         System.out.println(root.val);
         System.out.println("Max.max is");
-        int ans = Math.max(left, right) + 1;
+        int ans = Math.min(left, right) + 1;
         System.out.println(ans);
 
         return ans;
