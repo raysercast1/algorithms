@@ -56,7 +56,12 @@ public class RangeSumBST {
         int ans2 = rangeSumBSTIterative(ten, 7, 15);
         System.out.println(String.format("Iterative ans: %d", ans2));
       }
-
+        
+      //O(n) time and space complexity.
+      //on average this algorithm will perform better than simply searching all nodes.
+      //e.g.;if you had a full tree with a million nodes, and the root's value was greater than high, then you can immediately 
+      //save 500,000 visits based on the logic that all nodes in the right subtree are greater than 
+      //the root's value which is already outside the range.
       private static int rangeSumBST(Node root, int low, int high) {
           if (root == null) return 0;
 
@@ -74,6 +79,7 @@ public class RangeSumBST {
           }
 
           //If current node val is less than 'high' it means that we can still find a greater node in the right side.
+          //If not then there's no point in going to the right.
           if (high > root.val) {
             ans += rangeSumBST(root.right, low, high);
           }

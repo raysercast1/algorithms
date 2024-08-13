@@ -69,7 +69,9 @@ public class MinAbsDiff {
 
         return ans; 
       }
-
+      
+      //O(n) time and space complexity.
+      //When doing In-order DFS in a BST, we can get the nodes in sorted order w/out the O(n.log n) sort.
       private static void dfs(Node n, List<Integer> values) {
         if (n == null) return;
         
