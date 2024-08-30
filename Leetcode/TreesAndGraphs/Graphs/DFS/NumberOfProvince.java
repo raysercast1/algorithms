@@ -5,6 +5,15 @@ import java.util.Stack;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+/*
+ The time complexity for DFS on graphs is usually O(n + e),where nn is the number of nodes and ee is the number of edges.
+ In the worst-case scenario where every node is connected with every other node, e=nSquare.
+
+ Technically in this problem, the time complexity is O(nSquare) because the input is given as an adjacency matrix, 
+ so we always need O(nSquare) to build the hash map. O(e + nSquare) -> O(nSquare).
+ In terms of space complexity, the hash map only grows if the edges actually exist. Space complexity O(n + e).
+ In the worst case scenario, e=nSquare, but e is still independent of n.
+ * */
 public class NumberOfProvince {
     //To save the node and its neighbors as list.
     static Map<Integer, List<Integer>> graph = new HashMap<>();
