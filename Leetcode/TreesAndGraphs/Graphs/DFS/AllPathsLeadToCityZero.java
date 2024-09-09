@@ -18,6 +18,8 @@ public class AllPathsLeadToCityZero {
         System.out.println(String.format("Number of swapped routes to point all to City Zero: #%d", ans));
     }
 
+    //The time and space complexity of this algorithm is O(n) because we only visit each node once, 
+    //do constant work, and the number of edges is n−1 = O(n). Roads, Graph, and Visited all take up at most O(n) space.
     public static class Solution {
         Set<String> roads = new HashSet<>();
         Set<Integer> visited = new HashSet<>();
