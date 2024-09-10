@@ -5,6 +5,14 @@ import java.util.HashSet;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+
+/*
+ *Adjacency lists are the most convenient input format when the nodes are numbered from 0 to n - 1
+  because we don't need to convert it to a hash map - it basically is already in that format.
+  As such, the only extra space we use here is in seen set and the recursion call stack, which both are O(n).
+  The time complexity is O(n + e) as we visit each node once and the for loops inside each visit
+  will iterate up to e times total across the entire algorithm.
+ * */
 public class KeysAndRooms {
     public static void main(String[] args) {
         //Adjacency List as input
