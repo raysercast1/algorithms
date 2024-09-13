@@ -24,23 +24,47 @@ public class PathInGraph {
         int nodes = 3;
 
         Solution solN = new Solution();
-        boolean ansN = sol.validPath(nodes, edgesN, sourceN, destinationN);
+        boolean ansN = solN.validPath(nodes, edgesN, sourceN, destinationN);
         System.out.println("2nd ans: " + ansN);
     }
 
     public static class Solution {
+        Set<String> paths = new HashSet<>();
+        Set<Integer> seen = new HashSet<>();
+        Map<Integer, List<Integer>> graph = new HashMap<>();
+
         public boolean validPath(int n, int[][] edges, int source, int destination) {
-            boolean ans = false;
+            if (n == 1) return true;
+            for (int i = 0; i < n; i++) {
+                graph.put(i, new ArrayList<>());
+            }
 
             for (int[] edge: edges) {
                 int src = edge[0];
                 int dest = edge[1];
+                
+                graph.get(src).add(dest);
+                graph.get(dest).add(src);
+            }
+            
+            int ans = dfs(source, destination);
 
-                if (src == source && dest == destination || src == destination && dest == source) {
-                    ans = true;
+            return ans > 0 ? true : false;
+        }
+
+        public int dfs(int node, int dest) {
+            int ans = 0;
+
+            for (int neighbor: graph.get(node)) {
+                if (!seen.contains(neighbor)) {
+                    if (neighbor == dest) {
+                        ans++;
+                    }
+                    seen.add(neighbor);
+                    ans += dfs(neighbor, dest);
                 }
             }
-
+            
             return ans;
         }
     }
