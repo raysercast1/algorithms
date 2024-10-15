@@ -1,10 +1,14 @@
+package Leetcode.TreesAndGraphs.DepthFirstSearch;
+
+import java.util.Stack;
+
 public class PathSumIterative {
     public static class Node {                                                                                                     
            int val;
            Node left;
            Node right;
    
-           Node() {};
+           Node() {}
    
            Node (int val) {
               this.val = val;
@@ -25,8 +29,7 @@ public class PathSumIterative {
           Node four = new Node(4);
           Node five = new Node(5);
           Node six = new Node(6);
-          Node seven = new Node(7);
-  
+
           zero.left = one;
           zero.right = two;
           one.left = three;                                                                                                          
@@ -34,7 +37,7 @@ public class PathSumIterative {
           four.right = six;
           two.right = five;
   
-          boolean ans = pathSumCheck(zero, 7);
+          boolean ans = pathSumCheck(zero);
           System.out.println("Ans is: ");
           System.out.println(ans);
   
@@ -53,7 +56,7 @@ public class PathSumIterative {
       
 
 
-      private static boolean pathSumCheck(Node root, int targetSum) {
+      private static boolean pathSumCheck(Node root) {
         if (root == null) {
             return false;
         }  
@@ -68,7 +71,7 @@ public class PathSumIterative {
            int curr = pair.curr;
 
           if (node.left == null && node.right == null) {
-            return curr + node.val == targetSum;
+            return curr + node.val == 7;
           } 
 
             curr += node.val;
