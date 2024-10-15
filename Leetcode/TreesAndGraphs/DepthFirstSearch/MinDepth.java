@@ -1,10 +1,12 @@
+package Leetcode.TreesAndGraphs.DepthFirstSearch;
+
 public class MinDepth {
     public static class Node {
         int val;
         Node left;
         Node right;
 
-        Node() {};
+        Node() {}
 
         Node (int val) {
             this.val = val;
@@ -79,17 +81,16 @@ public class MinDepth {
        
         if (left == 0 && right == 0) {
             return 1;
-        };
+        }
 
         if (left == 0 && right != 0) {
             return right + 1; 
-        };
+        }
 
         if (right == 0 && left != 0) {
             return left + 1;
-        };
+        }
 
-        int ans = Math.min(left, right) + 1;
-        return ans;
+        return Math.min(left, right) + 1;
     }
 }

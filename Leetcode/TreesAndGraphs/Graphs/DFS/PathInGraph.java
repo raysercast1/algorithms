@@ -1,3 +1,5 @@
+package Leetcode.TreesAndGraphs.Graphs.DFS;
+
 import java.util.Set;
 import java.util.HashSet;
 import java.util.Map;
@@ -49,7 +51,7 @@ public class PathInGraph {
             
             int ans = dfs(source, destination);
 
-            return ans > 0 ? true : false;
+            return ans > 0;
         }
 
         public int dfs(int node, int dest) {

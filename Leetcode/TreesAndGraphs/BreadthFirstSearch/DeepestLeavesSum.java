@@ -1,8 +1,7 @@
+package Leetcode.TreesAndGraphs.BreadthFirstSearch;
+
 import java.util.Queue;
-import java.util.List;
 import java.util.LinkedList;
-import java.util.ArrayList;
-import java.util.Stack;
 
 public class DeepestLeavesSum {
     public static class Node {
@@ -10,7 +9,7 @@ public class DeepestLeavesSum {
         Node left;
         Node right;
 
-        Node() {};
+        Node() {}
 
         Node (int val) {
             this.val = val;
@@ -24,7 +23,6 @@ public class DeepestLeavesSum {
      }
 
     public static void main(String[] args) {
-        Node zero = new Node(0);
         Node one = new Node(1);
         Node two = new Node(2);
         Node three = new Node(3);
@@ -33,14 +31,7 @@ public class DeepestLeavesSum {
         Node six = new Node(6);
         Node seven = new Node(7);
         Node eight = new Node(8);
-        Node nine = new Node(9);
         Node ten = new Node(10);
-        Node eleven = new Node(11);
-        Node twelve = new Node(12);
-        Node thirdteen = new Node(13);
-        Node fourteen = new Node(14);
-        Node fifteen = new Node(15);
-        Node sixteen = new Node(16);
 
         /*
            1
@@ -62,7 +53,7 @@ public class DeepestLeavesSum {
 
        int ans = findDeepestLevelBFSAndSumDeepestNodes(ten);
        //int ans = findDeepestLevelBFSAndSumDeepestNodes(one);
-       System.out.println(String.format("Ans: %d", ans));
+       System.out.printf("Ans: %d%n", ans);
     }
 
   

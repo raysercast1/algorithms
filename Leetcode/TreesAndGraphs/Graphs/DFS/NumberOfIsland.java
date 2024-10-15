@@ -1,3 +1,5 @@
+package Leetcode.TreesAndGraphs.Graphs.DFS;
+
 import java.util.Stack;
 import java.util.Arrays;
 
@@ -19,7 +21,7 @@ public class NumberOfIsland {
 
         Solution sol = new Solution();
         int ans = sol.numIslands(input);
-        System.out.println(String.format("Ans is: %d for connected components", ans));
+        System.out.printf("Ans is: %d for connected components%n", ans);
         System.out.println("[\n [1,1,1,1,0] \n [1,1,0,1,0] \n [1,1,0,0,0] \n [0,0,0,0,0] \n]");
     }
 
@@ -40,13 +42,12 @@ public class NumberOfIsland {
                 for (int col = 0; col < n; col++) {
                     if (grid[row][col] == '1' && !seen[row][col]) {
                         ans++;
-                        System.out.println(
-                                String.format(
-                                    "Ans updated to %d for main loops -> row: #%d and column #%d", ans, row, col));
+                        System.out.printf(
+                                "Ans updated to %d for main loops -> row: #%d and column #%d%n", ans, row, col);
                         seen[row][col] = true;
                         System.out.println();
-                        System.out.println(String.format("Seen in main updated at row #%d and col #%d", row, col));
-                        System.out.println(String.format("-> %s", Arrays.toString(seen[row])));
+                        System.out.printf("Seen in main updated at row #%d and col #%d%n", row, col);
+                        System.out.printf("-> %s%n", Arrays.toString(seen[row]));
                         System.out.println();
                         dfs(row, col, grid);
                     }
@@ -76,8 +77,8 @@ public class NumberOfIsland {
 
                 if (valid(nextRow, nextCol, grid) && !seen[nextRow][nextCol]) {
                     seen[nextRow][nextCol] = true;
-                    System.out.println(String.format("Seen in dfs updated at row #%d and col #%d", nextRow, nextCol));
-                    System.out.println(String.format("-> %s", Arrays.toString(seen[nextRow])));
+                    System.out.printf("Seen in dfs updated at row #%d and col #%d%n", nextRow, nextCol);
+                    System.out.printf("-> %s%n", Arrays.toString(seen[nextRow]));
                     System.out.println();
                     dfs(nextRow, nextCol, grid);
                 }

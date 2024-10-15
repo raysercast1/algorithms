@@ -1,3 +1,5 @@
+package Leetcode.TreesAndGraphs.BinarySearchTree;
+
 import java.util.Stack;
 
 public class InsertIntoBST {
@@ -6,7 +8,7 @@ public class InsertIntoBST {
         Node left;
         Node right;
 
-        Node() {};
+        Node() {}
 
         Node (int val) {
             this.val = val;
@@ -20,16 +22,9 @@ public class InsertIntoBST {
      }
 
       static public void main(String[] args) {
-        Node zero = new Node(0);
-        Node one = new Node(1);
-        Node two = new Node(2);
         Node three = new Node(3);
-        Node four = new Node(4);
         Node five = new Node(5);
-        Node six = new Node(6);
         Node seven = new Node(7);
-        Node eight = new Node(8);
-        Node nine = new Node(9);
         Node ten = new Node(10);
         Node fifthteen = new Node(15);
         Node eithteen = new Node(18);
@@ -57,7 +52,7 @@ public class InsertIntoBST {
         while (!stack.empty()) {
             Node n = stack.pop();
             
-            System.out.println(String.format("Values of BTree with inserted node is: %d", n.val));
+            System.out.printf("Values of BTree with inserted node is: %d%n", n.val);
 
             if (n.left != null) stack.push(n.left);
             if (n.right != null) stack.push(n.right); 

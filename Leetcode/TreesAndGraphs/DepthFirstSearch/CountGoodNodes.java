@@ -1,10 +1,12 @@
+package Leetcode.TreesAndGraphs.DepthFirstSearch;
+
 public class CountGoodNodes {
     public static class Node {
         int val;
         Node left;
         Node right;
 
-        Node() {};
+        Node() {}
 
         Node (int val) {
             this.val = val;
@@ -18,20 +20,14 @@ public class CountGoodNodes {
      }
 
     public static void main(String[] args) {
-        Node zero = new Node(0);
         Node one = new Node(1);
         Node two = new Node(2);
-        Node three = new Node(3);
         Node four = new Node(4);
         Node fourInRight = new Node(4);
         Node five = new Node(5);
-        Node six = new Node(6);
         Node seven = new Node(7);
         Node eight = new Node(8);
-        Node nine = new Node(9);
-        Node ten = new Node(10);
         Node eleven = new Node(11);
-        Node twelve = new Node(12);
         Node thirdteen = new Node(13);
 
         five.left = four;
@@ -55,12 +51,12 @@ public class CountGoodNodes {
             return 0;
         }
         
-        System.out.println(String.format("Node #: %d", node.val));
-        System.out.println(String.format("For the LEFT side the max value seen is: %d ", Math.max(maxSoFar, node.val))); 
+        System.out.printf("Node #: %d%n", node.val);
+        System.out.printf("For the LEFT side the max value seen is: %d %n", Math.max(maxSoFar, node.val));
         int left = goodNodes(node.left, Math.max(maxSoFar, node.val));
 
-        System.out.println(String.format("Node #: %d", node.val));
-        System.out.println(String.format("For the RIGHT side the max value seen is: %d ", Math.max(maxSoFar, node.val))); 
+        System.out.printf("Node #: %d%n", node.val);
+        System.out.printf("For the RIGHT side the max value seen is: %d %n", Math.max(maxSoFar, node.val));
         int right = goodNodes(node.right, Math.max(maxSoFar, node.val));
 
         int ans = left + right;

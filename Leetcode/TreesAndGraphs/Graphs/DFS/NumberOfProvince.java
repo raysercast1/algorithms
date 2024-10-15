@@ -1,3 +1,5 @@
+package Leetcode.TreesAndGraphs.Graphs.DFS;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.List;
@@ -26,7 +28,7 @@ public class NumberOfProvince {
 
         int ans = findCircleNum(adjacencyMatrix);
 
-        System.out.println(String.format("Number of provinces (Connected Nodes/Cities) are: %d", ans));
+        System.out.printf("Number of provinces (Connected Nodes/Cities) are: %d%n", ans);
     };
 
     private static int findCircleNum(int[][] isConnected) {
@@ -34,13 +36,13 @@ public class NumberOfProvince {
         int n = isConnected.length;
         //Build the graph
         for (int i = 0; i < n; i++) {
-            System.out.println(String.format("Outer loop for node in row: %d", i));
+            System.out.printf("Outer loop for node in row: %d%n", i);
             if (!graph.containsKey(i)) {
                 graph.put(i, new ArrayList<>());
             }
 
             for (int j = i + 1; j < n; j++) {
-                System.out.println(String.format("Inner loop for node in col: %d", j));
+                System.out.printf("Inner loop for node in col: %d%n", j);
                if (!graph.containsKey(j)) {
                     graph.put(j, new ArrayList<>());
                }
@@ -53,7 +55,7 @@ public class NumberOfProvince {
 
        seen = new boolean[n]; 
        for (int i = 0; i < n; i++) {
-           System.out.println(String.format("Seen[] = %s", Arrays.toString(seen)));
+           System.out.printf("Seen[] = %s%n", Arrays.toString(seen));
            if (!seen[i]) {
                ans++;
                seen[i] = true;
@@ -64,12 +66,12 @@ public class NumberOfProvince {
     }
 
     private static void dfs(int node) {
-        System.out.println(String.format("Node seen: %d", node));
+        System.out.printf("Node seen: %d%n", node);
         for (int neighbor: graph.get(node)) {
-            System.out.println(String.format("neighbor: %d", neighbor));
+            System.out.printf("neighbor: %d%n", neighbor);
             if (!seen[neighbor]) {
                 seen[neighbor] = true;
-                System.out.println(String.format("Seen in DFS %s", Arrays.toString(seen)));
+                System.out.printf("Seen in DFS %s%n", Arrays.toString(seen));
                 dfs(neighbor);
             }
         }

@@ -1,3 +1,5 @@
+package Leetcode.TreesAndGraphs.Graphs.DFS;
+
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -15,7 +17,7 @@ public class AllPathsLeadToCityZero {
 
         System.out.println("Directed Edges Graph: [ \n [0,1] \n [3,1] \n [2,3] \n [4,0] \n [5,4] \n]");
         int ans = sol.minReorder(cities, directedEdgesGraph);
-        System.out.println(String.format("Number of swapped routes to point all to City Zero: #%d", ans));
+        System.out.printf("Number of swapped routes to point all to City Zero: #%d%n", ans);
     }
 
     //The time and space complexity of this algorithm is O(n) because we only visit each node once, 
@@ -67,10 +69,10 @@ public class AllPathsLeadToCityZero {
                 }
             }
             return ans;
-        };
+        }
 
         public String convertToHash(int fromCityX, int toCityY) {
-            return String.valueOf(fromCityX) + "," + String.valueOf(toCityY);
+            return fromCityX + "," + toCityY;
         }
 
         public int dfsIte(int cityZero) {

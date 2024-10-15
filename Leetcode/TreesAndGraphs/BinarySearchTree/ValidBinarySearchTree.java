@@ -1,3 +1,5 @@
+package Leetcode.TreesAndGraphs.BinarySearchTree;
+
 import java.util.Stack;
 
 public class ValidBinarySearchTree {
@@ -6,7 +8,7 @@ public class ValidBinarySearchTree {
         Node left;
         Node right;
 
-        Node() {};
+        Node() {}
 
         Node (int val) {
             this.val = val;
@@ -21,16 +23,9 @@ public class ValidBinarySearchTree {
 
 
       static public void main(String[] args) {
-        Node zero = new Node(0);
-        Node one = new Node(1);
-        Node two = new Node(2);
         Node three = new Node(3);
-        Node four = new Node(4);
         Node five = new Node(5);
-        Node six = new Node(6);
         Node seven = new Node(7);
-        Node eight = new Node(8);
-        Node nine = new Node(9);
         Node ten = new Node(10);
         Node fifthteen = new Node(15);
         Node eithteen = new Node(18);
@@ -50,10 +45,10 @@ public class ValidBinarySearchTree {
         fifthteen.right = eithteen;
 
         boolean ans = isValidBST(ten);
-        System.out.println(String.format("Recursively: ans: %b", ans));
+        System.out.printf("Recursively: ans: %b%n", ans);
 
         boolean ans2 = isValidBSTIterative(ten);
-        System.out.println(String.format("Iterative: ans: %b", ans));
+        System.out.printf("Iterative: ans: %b%n", ans);
       }
 
 

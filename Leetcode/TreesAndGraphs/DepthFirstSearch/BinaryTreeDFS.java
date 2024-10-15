@@ -1,4 +1,4 @@
-package Leetcode.TreesAndGraphs;
+package Leetcode.TreesAndGraphs.DepthFirstSearch;
 
 public class BinaryTreeDFS {
     public static void main(String[] args) {
@@ -9,7 +9,6 @@ public class BinaryTreeDFS {
         Node four = new Node(4);
         Node five = new Node(5);
         Node six = new Node(6);
-        Node seven = new Node(7);
 
         zero.left = one;
         zero.right = two;
@@ -66,7 +65,6 @@ public class BinaryTreeDFS {
 
         preOrderDfs(node.left);
         preOrderDfs(node.right);
-        return;
     }
 
     //For inorder traversal, we first recursively call the left child, then perform logic.
@@ -83,7 +81,6 @@ public class BinaryTreeDFS {
         System.out.println(node.val);
 
         inOrderDfs(node.right);
-        return;
     }
     
     //recursively call on the children first and then perform logic on the current node.
@@ -97,6 +94,5 @@ public class BinaryTreeDFS {
         postOrderDfs(node.left);
         postOrderDfs(node.right);
         System.out.println(node.val);
-        return;
     }
 }

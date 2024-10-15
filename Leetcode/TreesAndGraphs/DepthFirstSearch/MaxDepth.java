@@ -1,10 +1,12 @@
- public class MaxDepth {
+package Leetcode.TreesAndGraphs.DepthFirstSearch;
+
+public class MaxDepth {
      public static class Node {
         int val;
         Node left;
         Node right;
 
-        Node() {};
+        Node() {}
 
         Node (int val) {
             this.val = val;
@@ -25,7 +27,6 @@
         Node four = new Node(4);
         Node five = new Node(5);
         Node six = new Node(6);
-        Node seven = new Node(7);
 
         zero.left = one;
         zero.right = two;

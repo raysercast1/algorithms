@@ -1,3 +1,5 @@
+package Leetcode.TreesAndGraphs.Graphs.DFS;
+
 public class MaxAreaOfIsland {
     public static void main(String[] args) {
         int[][] connectedIsland = {

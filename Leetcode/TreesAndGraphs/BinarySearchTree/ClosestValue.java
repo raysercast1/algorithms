@@ -1,10 +1,12 @@
+package Leetcode.TreesAndGraphs.BinarySearchTree;
+
 public class ClosestValue {
     public static class Node {
         int val;
         Node left;
         Node right;
 
-        Node() {};
+        Node() {}
 
         Node (int val) {
             this.val = val;
@@ -18,21 +20,13 @@ public class ClosestValue {
      }
 
       static public void main(String[] args) {
-        Node zero = new Node(0);
-        Node one = new Node(1);
-        Node two = new Node(2);
         Node three = new Node(3);
-        Node four = new Node(4);
         Node five = new Node(5);
-        Node six = new Node(6);
         Node seven = new Node(7);
-        Node eight = new Node(8);
-        Node nine = new Node(9);
         Node ten = new Node(10);
         Node fifthteen = new Node(15);
         Node eithteen = new Node(18);
-        Node twenty = new Node(20);
-        
+
         /*
        10   
       /    \ 
@@ -67,7 +61,8 @@ public class ClosestValue {
             r = closestValNode(root.right, target);
         }
         
-        int closestValue = 
+        int closestValue = 8;
 
+          return ans;
       }
 }

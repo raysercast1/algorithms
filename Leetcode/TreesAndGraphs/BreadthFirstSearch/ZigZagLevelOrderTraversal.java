@@ -1,3 +1,5 @@
+package Leetcode.TreesAndGraphs.BreadthFirstSearch;
+
 import java.util.Queue;
 import java.util.List;
 import java.util.LinkedList;
@@ -8,7 +10,7 @@ public class ZigZagLevelOrderTraversal {
         Node left;
         Node right;
 
-        Node() {};
+        Node() {}
 
         Node (int val) {
             this.val = val;
@@ -22,7 +24,6 @@ public class ZigZagLevelOrderTraversal {
      }
     
     public static void main(String[] args) {
-        Node zero = new Node(0);
         Node one = new Node(1);
         Node two = new Node(2);
         Node three = new Node(3);
@@ -31,14 +32,6 @@ public class ZigZagLevelOrderTraversal {
         Node six = new Node(6);
         Node seven = new Node(7);
         Node eight = new Node(8);
-        Node nine = new Node(9);
-        Node ten = new Node(10);
-        Node eleven = new Node(11);
-        Node twelve = new Node(12);
-        Node thirdteen = new Node(13);
-        Node fourteen = new Node(14);
-        Node fifteen = new Node(15);
-        Node sixteen = new Node(16);
 
         /*
            1
@@ -61,7 +54,7 @@ public class ZigZagLevelOrderTraversal {
 
        List<List<Integer>> ans = zigzagLevelOrder(one);
        System.out.println("Answer is: ");
-       System.out.println(ans.toString());
+       System.out.println(ans);
     }
 
     private static List<List<Integer>> zigzagLevelOrder(Node root) {
@@ -84,7 +77,7 @@ public class ZigZagLevelOrderTraversal {
             if (n.right != null) queue.offer(new Pair(n.right, d + 1));
 
             if (d % 2 != 0) {
-                System.out.println(String.format("Odd value is: %d", n.val));
+                System.out.printf("Odd value is: %d%n", n.val);
                 List<Integer> innerList = new LinkedList<>();
                 if (n.right != null) {
                     innerList.add(n.right.val);
@@ -94,7 +87,7 @@ public class ZigZagLevelOrderTraversal {
                 }
                 ans.add(innerList);
             } else {
-                System.out.println(String.format("Even value is: %d", n.val));
+                System.out.printf("Even value is: %d%n", n.val);
                 List<Integer> innerList = new LinkedList<>();
                 if (n.left != null) {
                     innerList.add(n.left.val);

@@ -1,3 +1,5 @@
+package Leetcode.TreesAndGraphs.BinarySearchTree;
+
 import java.util.Stack;
 import java.util.List;
 import java.util.ArrayList;
@@ -8,7 +10,7 @@ public class MinAbsDiff {
         Node left;
         Node right;
 
-        Node() {};
+        Node() {}
 
         Node (int val) {
             this.val = val;
@@ -22,16 +24,9 @@ public class MinAbsDiff {
      }
 
       static public void main(String[] args) {
-        Node zero = new Node(0);
-        Node one = new Node(1);
-        Node two = new Node(2);
         Node three = new Node(3);
-        Node four = new Node(4);
         Node five = new Node(5);
-        Node six = new Node(6);
         Node seven = new Node(7);
-        Node eight = new Node(8);
-        Node nine = new Node(9);
         Node ten = new Node(10);
         Node fifthteen = new Node(15);
         Node eithteen = new Node(18);
@@ -50,10 +45,10 @@ public class MinAbsDiff {
         five.right = seven;
         fifthteen.right = eithteen;
         int ans = minimumAbsoluteDifference(ten);
-        System.out.println(String.format("Recursively: The minimun difference btw any of two nodes is: %d", ans));
+        System.out.printf("Recursively: The minimun difference btw any of two nodes is: %d%n", ans);
 
         int ans2 = minimumAbsDiffIterative(ten);
-        System.out.println(String.format("Iterative: The minimun difference btw any of two nodes is: %d", ans));
+        System.out.printf("Iterative: The minimun difference btw any of two nodes is: %d%n", ans);
       }
 
       private static int minimumAbsoluteDifference(Node root) {

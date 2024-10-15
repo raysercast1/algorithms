@@ -1,10 +1,12 @@
+package Leetcode.TreesAndGraphs.DepthFirstSearch;
+
 public class PathSum {
     public static class Node {
         int val;
         Node left;
         Node right;
 
-        Node() {};
+        Node() {}
 
         Node (int val) {
             this.val = val;
@@ -26,7 +28,6 @@ public class PathSum {
         Node four = new Node(4);
         Node five = new Node(5);
         Node six = new Node(6);
-        Node seven = new Node(7);
 
         zero.left = one;
         zero.right = two;
@@ -35,7 +36,7 @@ public class PathSum {
         four.right = six;
         two.right = five;
 
-        boolean ans = pathSumCheck(zero, 7);
+        boolean ans = pathSumCheck(zero);
         System.out.println("Ans is: ");
         System.out.println(ans);
 
@@ -43,8 +44,8 @@ public class PathSum {
     
     static int target;
 
-    private static boolean pathSumCheck(Node root, int targetSum) {
-        target = targetSum;
+    private static boolean pathSumCheck(Node root) {
+        target = 7;
         return dfs(root, 0); 
     }
 
@@ -53,10 +54,10 @@ public class PathSum {
     private static boolean dfs(Node node, int curr) {
         if (node == null) {
             return false;
-        };
+        }
         
         if (node.left == null && node.right == null) {
-            System.out.println(String.format("In leaf node %s, current sum is: ", node.val));
+            System.out.printf("In leaf node %s, current sum is: %n", node.val);
             System.out.println(curr);
 
             return (curr + node.val) == target;
@@ -71,5 +72,5 @@ public class PathSum {
         
         return left || right;
     
-    };
+    }
 }

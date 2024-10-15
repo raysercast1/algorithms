@@ -1,3 +1,5 @@
+package Leetcode.TreesAndGraphs.DepthFirstSearch;
+
 import java.util.Stack;
 
 public class MaxDepthWithIteration {
@@ -6,7 +8,7 @@ public class MaxDepthWithIteration {
         Node left;
         Node right;
 
-        Node() {};
+        Node() {}
 
         Node (int val) {
             this.val = val;
@@ -27,7 +29,6 @@ public class MaxDepthWithIteration {
         Node four = new Node(4);
         Node five = new Node(5);
         Node six = new Node(6);
-        Node seven = new Node(7);
 
         zero.left = one;
         zero.right = two;
@@ -78,7 +79,7 @@ public class MaxDepthWithIteration {
             stack.push(new Pair(node.right, depth + 1));
           }
         
-      };
+      }
        return ans;
      } 
 }

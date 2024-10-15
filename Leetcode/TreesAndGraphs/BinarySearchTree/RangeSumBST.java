@@ -1,3 +1,5 @@
+package Leetcode.TreesAndGraphs.BinarySearchTree;
+
 import java.util.Stack;
 
 public class RangeSumBST {
@@ -6,7 +8,7 @@ public class RangeSumBST {
         Node left;
         Node right;
 
-        Node() {};
+        Node() {}
 
         Node (int val) {
             this.val = val;
@@ -21,16 +23,9 @@ public class RangeSumBST {
 
 
       static public void main(String[] args) {
-        Node zero = new Node(0);
-        Node one = new Node(1);
-        Node two = new Node(2);
         Node three = new Node(3);
-        Node four = new Node(4);
         Node five = new Node(5);
-        Node six = new Node(6);
         Node seven = new Node(7);
-        Node eight = new Node(8);
-        Node nine = new Node(9);
         Node ten = new Node(10);
         Node fifthteen = new Node(15);
         Node eithteen = new Node(18);
@@ -50,11 +45,11 @@ public class RangeSumBST {
         fifthteen.right = eithteen;
 
         int ans = rangeSumBST(ten, 7, 15);
-        System.out.println(String.format("Sum of range is: %d", ans));
+        System.out.printf("Sum of range is: %d%n", ans);
         System.out.println("The node btw the range are: 10 - 7 - 15");
 
-        int ans2 = rangeSumBSTIterative(ten, 7, 15);
-        System.out.println(String.format("Iterative ans: %d", ans2));
+        int ans2 = rangeSumBSTIterative(ten);
+        System.out.printf("Iterative ans: %d%n", ans2);
       }
         
       //O(n) time and space complexity.
@@ -88,7 +83,7 @@ public class RangeSumBST {
           return ans;
       }
 
-      private static int rangeSumBSTIterative(Node root, int low, int high) {
+      private static int rangeSumBSTIterative(Node root) {
         Stack<Node> stack = new Stack<>();
         stack.push(root);
         int ans = 0;
@@ -96,15 +91,15 @@ public class RangeSumBST {
         while (!stack.empty()) {
             Node n = stack.pop();
             
-            if (low <= n.val && n.val <= high) {
+            if (7 <= n.val && n.val <= 15) {
                 ans += n.val;
             }
 
-            if (n.left != null && n.val > low) {
+            if (n.left != null && n.val > 7) {
                 stack.push(n.left);
             }
 
-            if (n.right != null && n.val < high) {
+            if (n.right != null && n.val < 15) {
                 stack.push(n.right);
             }
         }

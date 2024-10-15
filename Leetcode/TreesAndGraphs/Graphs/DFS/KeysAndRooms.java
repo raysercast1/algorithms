@@ -1,8 +1,9 @@
+package Leetcode.TreesAndGraphs.Graphs.DFS;
+
 import java.util.Set;
 import java.util.Stack;
 import java.util.List;
 import java.util.HashSet;
-import java.util.ArrayList;
 import java.util.Arrays;
 
 
@@ -17,30 +18,30 @@ public class KeysAndRooms {
     public static void main(String[] args) {
         //Adjacency List as input
         List<List<Integer>> rooms = Arrays.asList(
-                Arrays.asList(1),
-                Arrays.asList(2),
-                Arrays.asList(3),
-                Arrays.asList());
+                List.of(1),
+                List.of(2),
+                List.of(3),
+                List.of());
 
         System.out.println("List of list for Solution one is: " + rooms);
         Solution sol = new Solution();
         boolean ans = sol.canVisitAllRooms(rooms);
-        System.out.println(String.format("Answer should be True. ans = %b.", ans));
+        System.out.printf("Answer should be True. ans = %b.%n", ans);
         System.out.println();
 
         List<List<Integer>> roomsTwo = Arrays.asList(
                 Arrays.asList(1,3),
                 Arrays.asList(3,0,1),
-                Arrays.asList(2),
-                Arrays.asList(0));
+                List.of(2),
+                List.of(0));
 
         
         Solution sol2 = new Solution();
         System.out.println("List of list for Solution two is: " + roomsTwo);
         boolean ansTwo = sol2.canVisitAllRooms(roomsTwo);
 
-        System.out.println(String.format(
-                    "Answer should be False. ans = %b", ansTwo));
+        System.out.printf(
+                "Answer should be False. ans = %b%n", ansTwo);
 
     }
 
@@ -59,7 +60,7 @@ public class KeysAndRooms {
 
        public void dfs(int node, List<List<Integer>> rooms) {
             for (int neighbor: rooms.get(node)) {
-                System.out.println(String.format("In node #%d looking for neighbor #%d", node, neighbor));
+                System.out.printf("In node #%d looking for neighbor #%d%n", node, neighbor);
                 if (!seen.contains(neighbor)) {
                     seen.add(neighbor);
                     System.out.println("Added neighbor nodes as visited: " + seen.toString());
@@ -76,10 +77,10 @@ public class KeysAndRooms {
             while (!stack.empty()) {
                 int openRoom = stack.pop();
                 for (int keyOfClosedRoom: rooms.get(openRoom)) {
-                    System.out.println(String.format("In node #%d looking for neighbor #%d", openRoom, keyOfClosedRoom));
+                    System.out.printf("In node #%d looking for neighbor #%d%n", openRoom, keyOfClosedRoom);
                     if (!seen.contains(keyOfClosedRoom)) {
                         seen.add(keyOfClosedRoom);
-                        System.out.println("Added neighbor nodes as visited: " + seen.toString());
+                        System.out.println("Added neighbor nodes as visited: " + seen);
                         stack.push(keyOfClosedRoom);
                     }
                 }

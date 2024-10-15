@@ -1,10 +1,12 @@
+package Leetcode.TreesAndGraphs.DepthFirstSearch;
+
 public class LowestCommonAncestor {
     public static class Node {
         int val;
         Node left;
         Node right;
 
-        Node() {};
+        Node() {}
 
         Node (int val) {
             this.val = val;
@@ -18,20 +20,14 @@ public class LowestCommonAncestor {
      }
 
     public static void main(String[] args) {
-        Node zero = new Node(0);
         Node one = new Node(1);
         Node two = new Node(2);
-        Node three = new Node(3);
         Node four = new Node(4);
         Node fourInRight = new Node(4);
         Node five = new Node(5);
-        Node six = new Node(6);
         Node seven = new Node(7);
         Node eight = new Node(8);
-        Node nine = new Node(9);
-        Node ten = new Node(10);
         Node eleven = new Node(11);
-        Node twelve = new Node(12);
         Node thirdteen = new Node(13);
 
         five.left = four;
@@ -57,13 +53,13 @@ public class LowestCommonAncestor {
         
        
         Node firstCaseAns = lowestCommonAncestor(five, seven, two);
-        System.out.println(String.format("ANSWER: case one, LCA is: %d", firstCaseAns.val));
+        System.out.printf("ANSWER: case one, LCA is: %d%n", firstCaseAns.val);
 
         Node secondCaseAns = lowestCommonAncestor(five, eleven, one);
-        System.out.println(String.format("ANSWER: case two, LCA is: %d", secondCaseAns.val));
+        System.out.printf("ANSWER: case two, LCA is: %d%n", secondCaseAns.val);
 
         Node thirdCaseAns = lowestCommonAncestor(five, eight, five);
-        System.out.println(String.format("ANSWER: case third, LCA is: %d", thirdCaseAns.val));
+        System.out.printf("ANSWER: case third, LCA is: %d%n", thirdCaseAns.val);
  
         
     }   
@@ -90,8 +86,8 @@ public class LowestCommonAncestor {
             return null;
         }
         
-        System.out.println(String.format("LEFT: Root #: %d", root.val));
-        System.out.println(String.format("Pre-order, t1 is: %d and t2 is: %d", t1.val, t2.val));
+        System.out.printf("LEFT: Root #: %d%n", root.val);
+        System.out.printf("Pre-order, t1 is: %d and t2 is: %d%n", t1.val, t2.val);
         //first case
         if (root == t1 || root == t2) {
             return root;
@@ -99,10 +95,10 @@ public class LowestCommonAncestor {
         
         Node left = lowestCommonAncestor(root.left, t1, t2);
 
-        System.out.println(String.format("RIGHT: Root #: %d", root.val));
+        System.out.printf("RIGHT: Root #: %d%n", root.val);
         Node right  = lowestCommonAncestor(root.right, t1, t2);
         
-        System.out.println(String.format("Pos-order, left is: %d and right is: %d", (left != null) ? left.val : 000, (right != null) ? right.val : 000));
+        System.out.printf("Pos-order, left is: %d and right is: %d%n", (left != null) ? left.val : 000, (right != null) ? right.val : 000);
         //second case
         if (left != null && right != null) {
             return root;

@@ -1,10 +1,12 @@
+package Leetcode.TreesAndGraphs.DepthFirstSearch;
+
 public class MaxDiffBtwNodeAndAncestor {
     public static class Node {
         int val;
         Node left;
         Node right;
 
-        Node() {};
+        Node() {}
 
         Node (int val) {
             this.val = val;
@@ -17,23 +19,15 @@ public class MaxDiffBtwNodeAndAncestor {
         }
      }
     public static void main(String[] args) {
-        Node zero = new Node(0);
         Node one = new Node(1);
-        Node two = new Node(2);
         Node three = new Node(3);
         Node four = new Node(4);
-        Node five = new Node(5);
         Node six = new Node(6);
         Node seven = new Node(7);
         Node eight = new Node(8);
-        Node nine = new Node(9);
         Node ten = new Node(10);
-        Node eleven = new Node(11);
-        Node twelve = new Node(12);
         Node thirdteen = new Node(13);
         Node fourteen = new Node(14);
-        Node fifteen = new Node(15);
-        Node sixteen = new Node(16);
 
         /*
            8
@@ -62,25 +56,25 @@ public class MaxDiffBtwNodeAndAncestor {
     private static int maxAncestorDiff(Node root) {
         if (root == null) return 0;
 
-        System.out.println(String.format("Current Node: #%d", root.val));
+        System.out.printf("Current Node: #%d%n", root.val);
 
         int lowest = dfsLowestNode(root.left, root.val);
-        System.out.println(String.format("DFS: Lowest in Subtree is: %d", lowest));
+        System.out.printf("DFS: Lowest in Subtree is: %d%n", lowest);
         System.out.println(); 
 
 
         int l = maxAncestorDiff(root.left);
-        System.out.println(String.format("Main: LEFT is: %d for node: #%d", l, root.val));
+        System.out.printf("Main: LEFT is: %d for node: #%d%n", l, root.val);
         System.out.println(); 
 
         int r = maxAncestorDiff(root.right);
-        System.out.println(String.format("Main: RIGHT is: %d for node: #%d", r, root.val));
+        System.out.printf("Main: RIGHT is: %d for node: #%d%n", r, root.val);
         
 
         int ans = Math.max(l, r);
 
         System.out.println();
-        System.out.println(String.format("Node:#%d", root.val));
+        System.out.printf("Node:#%d%n", root.val);
 
        // return Math.abs(root.val - lowestInSubTree);
        return ans;
